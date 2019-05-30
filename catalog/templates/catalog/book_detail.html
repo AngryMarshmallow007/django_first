@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ game.title }}</h1>
+
+  <p><strong>Studio:</strong> <a href="">{{ game.studio }}</a></p> <!-- studio detail link not yet defined -->
+  <p><strong>Summary:</strong> {{ game.summary }}</p>
+  <p><strong>Language:</strong> {{ game.language }}</p>  
+  <p><strong>Genre:</strong> {% for genre in game.genre.all %} {{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
+
+{% endblock %}

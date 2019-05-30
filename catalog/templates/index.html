@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Games catalog Home</h1>
+
+  <p>Welcome to <em>Games catalog</em>, a very basic Django website developed as graduation project.</p>
+
+<h2>Dynamic content</h2>
+
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Games:</strong> {{ num_books }}</li>
+    <li><strong>Studios:</strong> {{ num_studios }}</li>
+  </ul>
+  
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+
+{% endblock %}
